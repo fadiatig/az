@@ -1,0 +1,36 @@
+var 
+htab1:HASH_TABLE<INEGER,INTEGER>
+htab2:HASH_TABLE<INEGER,INTEGER>
+a,b,i,j,som1,som2,som:integer
+ok,o:boolean
+
+Begin
+write("donner le nombre du prmeier liste:")
+read(a)
+for i to 0 from a-1 DO 
+ htab1.insert(i,ele)
+end_for
+write("donner le nombre du 2eme liste:")
+read(b)
+for i to 0 from b-1 DO 
+ htab2.insert(j,ele)
+end_for
+ok=true
+ for i to 0 from a-1 do 
+  if htab2.lookup(htab1.get(i))
+     ok=false
+     break
+  if ok=true then 
+  som1=som1+htab1.get(i)
+ end_for
+o=true 
+for j to 0 from b-1 do 
+  if htab1.lookup(htab2.get(j))
+     o=false
+     break
+  if o=true then 
+  som2=som2+htab2.get(j)
+ end_for
+som=som1+som2
+write("som=",som)
+end

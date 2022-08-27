@@ -1,0 +1,69 @@
+var 
+tab1:ARRAY_OF_INTEGER[a]
+tab2:ARRAY_OF_INTEGER[b]
+i,j,som1,som2,som:integer
+ok,k,o:boolean
+begin 
+//PREMIER TAB
+write("donner la longeur de premier tableau:")
+read(a)
+write("tab1[0]=")
+read(tab1[0])
+for i from 1 to a-1 do {
+ REPEAT {
+  write("ta1b[i]=")
+  read(tab1[i])
+  for (j from 0 to i-1) do { 
+   if tab1[i]=tab1[j] then 
+   ok=false
+   else 
+   ok=true
+    }
+ until ok=true 
+    }
+    }
+END_FOR
+//2eme tab 
+write("donner la longeur de 2 eme tableau:")
+read(b)
+write("tab2[0]=")
+read(tab2[0])
+for i from 1 to b-1 do {
+ REPEAT {
+  write("tab2[i]=")
+  read(tab2[i])
+  for (j from 0 to i-1) do { 
+   if tab2[i]=tab2[j] then 
+   ok=false
+   else 
+   ok=true
+    }
+ until ok=true 
+    }
+    }
+END_FOR
+k=true
+som1=0
+for i from 0 to a-1 do 
+ for j from 0 to b-1 do 
+  if tab1[i]=tab2[j] then 
+    k=false
+    break;
+  END_FOR
+ if k=true then 
+   som1=som1+tab1[i]
+end_for
+ o=true
+som2=0
+for j from 0 to b-1 do 
+ for i from 0 to a-1 do 
+  if tab1[j]=tab2[i] then 
+    k=false
+    break;
+  END_FOR
+ if o=true then 
+   som2=som2+tab1[j]
+end_for
+som=som1+som2
+write("som=",som)
+end
